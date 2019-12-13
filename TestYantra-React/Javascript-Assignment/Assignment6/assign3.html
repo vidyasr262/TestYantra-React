@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title>Document</title>
+
+    <style>
+        .navbar-brand {
+            font-weight: 600 !important;
+            font-size: 25px !important;
+            margin-right: 3rem !important;
+        }
+
+        .new-bg {
+            background-color: #263248;
+        }
+
+        .new-link {
+            color: #fff !important;
+            padding: 5px 12px !important;
+            ;
+        }
+
+        .new-link:hover {
+            color: #ff9800 !important;
+        }
+
+        footer {
+            background-color: #9e9e9ea1;
+            padding: 36px 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md new-bg navbar-dark">
+        <a class="navbar-brand" href="#">
+            <span style="color: #ff9800;">LOGO</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link new-link" href="#" id="home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link new-link" href="#" id="create">Create Account</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link new-link" href="#" id="show">Show Account</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+    <div class="container my-5" id="img">
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10">
+                <h2>Java Script</h2>
+                <img src="images/banner.jpg" alt="" width="1000px" class="img-fluid">
+            </div>
+            <div class="col-1"></div>
+
+
+        </div>
+    </div>
+
+<div class="container" id="form" style="display: none;">
+
+    <div class="col-md-4 offset-md-4 mt-4">   
+            <h4>Create Account</h4>
+            <hr>
+            <form name="createFrm">
+                <div class="form-group">
+                    <label for="">Name</label>
+                    <input type="text" class="form-control" placeholder="Enter your name" name="username" id="i1">
+                    <p id="item" style="display: none; font-size: 12px; color: red;">Please enter valid username, username must be greater than 3 character</p>
+
+                </div>
+
+                <div class="form-group">
+                    <label for="">Phone number</label>
+                    <input type="number" class="form-control" placeholder="Phone number" name="phone" id="i2">
+                    <p id="item1" style="display: none; font-size: 12px; color: red;">Please enter valid phone number</p>
+                </div>
+                <div class="form-group">
+                        <label for="">Password</label>
+                        <input type="password" class="form-control" placeholder="Enter your password" name="password" id="i3">
+                        <p id="item2" style="display: none; font-size: 12px; color: red;">Please enter valid password</p>
+
+                        <input type="checkbox" onclick="myFunction()"><span style="font-size: 14px;">Show Password</span>
+                    </div>
+               
+                
+                    <div class="form-group">
+                        <button onclick="createAccount()" type="button" class="btn btn-primary">Create Account</button>
+                        <!-- <input type="reset"  class="btn btn-primary">  -->
+                    </div>
+        
+                
+                <!-- <div class="form-group">
+                    <input type="submit" value="Create Account" class="btn btn-primary">
+                </div> -->
+    
+            </form>
+        </div>
+</div>
+
+    
+
+
+
+<div class="container" id="tab" style="display: none;">
+        <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Password</th>
+                    <th>Phone no.</th>
+                  </tr>
+                </thead>
+                <!-- <tbody>
+                  <tr>
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>john@example.com</td>
+                  </tr>
+                  <tr>
+                    <td>Mary</td>
+                    <td>Moe</td>
+                    <td>mary@example.com</td>
+                  </tr>
+                  
+                </tbody> -->
+              </table>
+
+              
+                    <div class="row">
+                        <div class="col-3"><button id="cl" class="btn btn-secondary">Clear All</button></div>
+                            <div class="col-9"><ul id="list"></ul></div>
+                            
+                    </div>
+                    
+               
+</div>
+
+    <footer style="position: fixed; bottom: 0;left: 0; right: 0;">
+        <div class="row">
+            <div class="col-sm-3">
+
+            </div>
+            <div class="col-sm-4 text">
+                <div><strong>E-mail:</strong> vidya.sr@testyantra.com</div>
+                <div><strong>Phone:</strong> +91 9990765454</div>
+            </div>
+            <div class="col-sm-5 text">
+                <!-- <div>© 2019 Test Yantra Software Solutions</div> -->
+
+            </div>
+        </div>
+
+    </footer>
+    <script src="assign3.js"></script>
+</body>
+
+</html>

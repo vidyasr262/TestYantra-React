@@ -1,0 +1,71 @@
+var flag=0;
+    function validateForm(){
+        let userEle = document.forms['loginForm']['username']
+        let phoneEle = document.forms['loginForm']['phone']
+        let ageEle = document.forms['loginForm']['age']
+        let emailEle = document.forms['loginForm']['email']
+        
+       
+        
+        if(userEle.value.trim().length == " " || userEle.value.trim().length < 3 ){
+            let nEle = document.getElementById("test1")
+            nEle.style.display = "block"
+            flag=1;
+           
+        }else {
+            let nEle = document.getElementById("test1")
+            nEle.style.display = "none"
+            flag=0;
+        }
+    
+         if(ageEle.value.trim() < 1 || ageEle.value.trim() > 140  ){
+            
+            let aEle = document.getElementById("test2")
+            aEle.style.display = "block"
+            flag=1;
+           
+        }else {
+            let aEle = document.getElementById("test2")
+            aEle.style.display = "none"
+            flag=0;
+        
+        }
+    
+        var emailID = emailEle.value;
+             atpos = emailID.indexOf("@");                
+             dotpos = emailID.lastIndexOf(".");
+             
+    
+        if(atpos < 1 || ( dotpos - atpos < 2 ) ){
+            let eEle = document.getElementById("test3")
+            eEle.style.display = "block"
+            flag=1;
+           
+        }else {
+            let eEle = document.getElementById("test3")
+            eEle.style.display = "none"
+            flag=0;
+        
+        }
+    
+        if(phoneEle.value.trim().length === 10 || isNaN(phoneEle.value)  ){
+            let pEle = document.getElementById("test4")
+            pEle.style.display = "none"
+            flag=1;
+            
+        }else {
+            let pEle = document.getElementById("test4")
+            pEle.style.display = "block";
+            flag=0;
+        
+        }
+        
+        if(flag === 1){
+            alert("Success submitted")
+            document.forms['loginForm'].reset();
+        } else {
+            return false
+        }
+    }
+    
+    

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="myform">
+        <div class="form-group">
+            <label>Site Name</label>
+            <input type="text" name="name" class="form-control" placeholder="Enter Value" id="sitename">
+        </div>
+        <div class="form-group">
+            <label>Site Name</label>
+            <input type="url" name="url" class="form-control" placeholder="Enter URL" id="siteurl">
+        </div>
+        <div class="form-group">
+            <input type="button" onclick="addBook()" value="Add" class="btn btn-primary offset-sm-5">
+            <!-- <input type="submit" value="Add" class="btn btn-primary offset-sm-5"> -->
+        </div>
+    </form>
+
+    <div class="container mt-4">
+        <div class="jumbotron">
+            <div id="result"></div>
+        </div>
+    </div>
+
+    <script>
+
+        function addBook() {
+            var sit = document.getElementById('sitename').value;
+            var url = document.getElementById('siteurl').value;
+
+            const bookmark = { web: sit, link: url }
+            var bmarks = [];
+            //Add to array
+            bmarks.push(bookmark);
+            // Set to localStorage
+            localStorage.setItem('bmarks', JSON.stringify(bmarks));
+            console.log(bookmark)
+            console.log(bmarks)
+
+            document.getElementById('sitename').value = ""
+            document.getElementById('siteurl').value = ""
+
+            var b = JSON.parse(localStorage.getItem('bmarks'));
+            var box = document.getElementById('result');
+box.b;
+console.log(b)
+        }
+
+    </script>
+</body>
+
+</html>

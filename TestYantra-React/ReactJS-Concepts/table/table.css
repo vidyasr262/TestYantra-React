@@ -1,0 +1,12 @@
+.tableBorder {
+    border: 1px solid green;
+}
+
+.header {
+    color: indigo;
+}
+
+.tbody {
+    border: 1px solid;
+    border-collapse: collapse;
+}

@@ -1,0 +1,126 @@
+<!Doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<style> 
+
+</style>
+	</head>
+<body onload="fetchbmarks()">
+   <div class="container mt-4">
+   	<div class="jumbotron">
+	<form id="myform">
+		<div class="form-group">
+			<label>Site Name</label>
+			<input type="text" name="name" class="form-control" placeholder="Enter Value" id="sitename">
+		</div>
+	    <div class="form-group">
+			<label>Site Name</label>
+			<input type="url" name="url" class="form-control" placeholder="Enter URL" id="siteurl">
+		</div>
+    	<div class="form-group">
+			<input type="button" onclick="addBook()" value="Add" class="btn btn-primary offset-sm-5">
+      <!-- <input type="submit" value="Add" class="btn btn-primary offset-sm-5"> -->
+    </div>
+	</form>
+</div>
+   </div>
+   <div class="container mt-4">
+   	<div class="jumbotron">
+   <div id="result"></div>
+</div></div>
+
+ <script>
+ 	// document.getElementById("myform").addEventListener("submit", addBook);
+
+ 	function addBook()
+ 	{
+ 		
+ 		var n = document.getElementById("sitename").value;
+ 		var url = document.getElementById("siteurl").value;
+ 		
+ 		var bookmark = {webname: n, url:url}
+        // console.log(bookmark);
+
+        // local storage test
+
+        // localStorage.setItem('test', 'hello');
+        // console.log(localStorage.getItem('test'));
+        // localStorage.removeItem('test');
+        // console.log(localStorage.getItem('test'));
+
+         //test if bookmrks is null
+         if(localStorage.getItem('bmarks')=== null)
+         {
+         	//Init array
+         	var bmarks= [];
+         	//Add to array
+         	bmarks.push(bookmark);
+            // Set to localStorage
+         	localStorage.setItem('bmarks', JSON.stringify(bmarks));
+         }else 
+         {    
+         	//Get bookmark from localStorage
+         	var bmarks = JSON.parse(localStorage.getItem('bmarks'));
+              //Add to array
+         	bmarks.push(bookmark);
+             // Re-Set back to localStorage
+         	localStorage.setItem('bmarks', JSON.stringify(bmarks));
+         }
+            
+
+            fetchbmarks();
+
+            document.getElementById("sitename").value = "";
+            document.getElementById("siteurl").value = "";
+         //prevent form from submitting 
+ 		e.preventDefault();
+ 	}
+
+
+    function deleteresult(url)
+    {
+    	var bmarks = JSON.parse(localStorage.getItem('bmarks'));
+         for(var i=0; i<bmarks.length; i++)
+         {
+
+         if(bmarks[i].url == url)
+         {
+         	bmarks.splice(i, 1);
+         }
+         }
+      localStorage.setItem('bmarks', JSON.stringify(bmarks));
+      fetchbmarks();
+    }
+
+ 	function fetchbmarks()
+ 	{
+ 		//get bookmarks from localstorage
+    var bmarks = JSON.parse(localStorage.getItem('bmarks')); 
+    //get output id
+    var bookmarkresult = document.getElementById('result');
+
+    //Build output
+    bookmarkresult.innerHTML = '';
+
+    for(var i=0; i<bmarks.length; i++)
+    {
+    	var name = bmarks[i].webname;
+    	var url = bmarks[i].url;
+
+    bookmarkresult.innerHTML += name + '<a class="btn btn-primary m-2" href="'+url+'" target="_blank">Visit</a>' +
+                                  '<a onclick="deleteresult(\''+url+'\')" class="btn btn-primary m-2" href="#">Delete</a>' + '<br>';
+
+    }
+
+     	}
+ </script>
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+.frm1 {
+    position: relative;
+    margin: 50px;
+}
+.fa.fa-search {
+position: absolute;
+    top: 12px;
+    left: 10px;
+}
+.badge-danger {
+    color: black;
+    background-color: #dc3545;
+    font-weight: 400;
+}
+.search {
+    padding-left: 35px;
+    background-color: #333;
+    color: #999;
+    border: none;
+}
+header {
+    background: #000;
+    color: #8c8c8c;
+    padding-bottom: 1px;
+    -webkit-font-feature-settings: "kern";
+    font-feature-settings: "kern";
+}
+.a1 {
+    font-size: 40px;
+    font-weight: 600;
+}
+.a2 {
+    border-bottom: 1px solid #80808024;
+}
+.a3 {
+    
+    margin: 10px;
+    border-left: 1px solid #80808024;
+    padding-left: 30px;
+}
+li.nav-item {
+    padding: 0 10px;
+}
+.a5 {
+    background-color: #fff;
+    padding: 10px 0;
+    border: 1px solid #8080807a;
+}
+
+.a6 {
+    border-top: 1px solid #80808026;
+    margin: 8px 0;
+    padding: 10px;
+}
+.flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    
+  }
+  
+  .flex-container > div {
+    
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 20px;
+    
+  }
+  .a7 {
+    text-align: left !important;
+    font-size: 18px;
+    color: black;
+  }
+  .a8 {
+    border-right: 1px solid #8080804f;
+    color: #673AB7;
+    padding-right: 18px;
+  }
+  a.lin {
+    text-decoration: none;
+}
+
+.a9 {
+    padding: 10px 20px;
+    border-top: 1px solid #80808026;
+    font-size: 18px;
+}
+.a9 a {
+    color: #673AB7;
+}
+.btn-b {
+    border: 1px solid #80808080;
+    border-radius: 24px;
+    padding: 3px 18px;
+    color: grey;
+    margin: 0px 0 12px;
+}
+.a11 {
+    font-size: 20px;
+    /* padding: 5px; */
+}
+.edit {
+    border-radius: 50%;
+    border: 1px solid grey;
+    display: inline-block;
+    padding: 0 9px 7px;
+    color: grey;
+    font-weight: 600;
+    position: absolute;
+}
+.green-btn{
+background-color: green;
+    font-size: 10px;
+    border-radius: 50%;
+    border: 3px solid green;
+    padding: 3px 3px;
+    position: absolute;
+    top: 7px;
+    left: -14px;
+}
+.act {
+    background-color: #8080805e;
+    padding: 10px 15px;
+    font-weight: 400;
+    font-size: 16px;
+    margin: 0 15px;
+}
+
+@media (max-width: 1000px) and (min-width: 480px){
+    .cc {
+        clear: right;
+    }
+    .caa{
+        float: none !important;
+    }
+    .a6 {
+        margin: 30px 0;
+    }
+}
+.caa {
+    float: right;
+}
+i.fa.fa-arrow-up {
+position: absolute;
+    transform: rotate(50deg);
+    margin-top: 4px;
+    padding-left: 10px;
+    font-size: 14px;
+}

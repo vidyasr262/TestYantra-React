@@ -1,0 +1,46 @@
+.order{
+    list-style-type: upper-roman;
+    font-size: 20px;
+    background-color: cadetblue;
+}
+.unorder{
+    list-style-type: square;
+    background-color: cornflowerblue;
+    color: crimson;
+    font-size: 20px;
+    display: block;
+}
+
+/* .table {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+.th {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+.td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  } */
+
+
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+  }
+  .header {
+      background-color: darkolivegreen;
+      color: #fff;
+  }
+
+
+  .inner{
+      padding: 20px;
+  }
+
+  .form{
+    padding: 20px;
+    /* display: flex; */
+}
